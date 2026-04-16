@@ -1,0 +1,22 @@
+[
+  { "_id": 1,  "customer_id": "C001", "category": "Electronics", "product": "Laptop",        "amount": 1200.00, "date": "2024-01-05T10:30:00Z", "region": "North" },
+  { "_id": 2,  "customer_id": "C002", "category": "Clothing",    "product": "Jacket",         "amount": 89.99,   "date": "2024-01-12T14:00:00Z", "region": "South" },
+  { "_id": 3,  "customer_id": "C001", "category": "Electronics", "product": "Mouse",          "amount": 35.00,   "date": "2024-01-18T09:00:00Z", "region": "North" },
+  { "_id": 4,  "customer_id": "C003", "category": "Books",       "product": "NoSQL Guide",    "amount": 45.00,   "date": "2024-02-03T11:00:00Z", "region": "East"  },
+  { "_id": 5,  "customer_id": "C002", "category": "Electronics", "product": "Headphones",     "amount": 150.00,  "date": "2024-02-14T16:30:00Z", "region": "South" },
+  { "_id": 6,  "customer_id": "C004", "category": "Books",       "product": "Python Basics",  "amount": 39.99,   "date": "2024-02-20T08:00:00Z", "region": "West"  },
+  { "_id": 7,  "customer_id": "C003", "category": "Clothing",    "product": "Shoes",          "amount": 120.00,  "date": "2024-03-01T13:00:00Z", "region": "East"  },
+  { "_id": 8,  "customer_id": "C005", "category": "Electronics", "product": "Tablet",         "amount": 499.00,  "date": "2024-03-10T10:00:00Z", "region": "North" },
+  { "_id": 9,  "customer_id": "C001", "category": "Books",       "product": "MongoDB Docs",   "amount": 55.00,   "date": "2024-03-22T15:00:00Z", "region": "North" },
+  { "_id": 10, "customer_id": "C004", "category": "Clothing",    "product": "T-Shirt",        "amount": 25.00,   "date": "2024-04-05T09:30:00Z", "region": "West"  },
+  { "_id": 11, "customer_id": "C005", "category": "Electronics", "product": "Keyboard",       "amount": 75.00,   "date": "2024-04-12T11:00:00Z", "region": "North" },
+  { "_id": 12, "customer_id": "C002", "category": "Books",       "product": "Graph Databases","amount": 49.00,   "date": "2024-04-18T14:30:00Z", "region": "South" },
+  { "_id": 13, "customer_id": "C006", "category": "Electronics", "product": "Monitor",        "amount": 320.00,  "date": "2024-05-03T10:00:00Z", "region": "East"  },
+  { "_id": 14, "customer_id": "C003", "category": "Clothing",    "product": "Pants",          "amount": 65.00,   "date": "2024-05-15T16:00:00Z", "region": "East"  },
+  { "_id": 15, "customer_id": "C006", "category": "Books",       "product": "Data Science",   "amount": 60.00,   "date": "2024-05-25T08:30:00Z", "region": "East"  },
+  { "_id": 16, "customer_id": "C001", "category": "Electronics", "product": "USB Hub",        "amount": 28.00,   "date": "2024-06-01T12:00:00Z", "region": "North" },
+  { "_id": 17, "customer_id": "C005", "category": "Clothing",    "product": "Hat",            "amount": 18.00,   "date": "2024-06-10T14:00:00Z", "region": "North" },
+  { "_id": 18, "customer_id": "C004", "category": "Electronics", "product": "Webcam",         "amount": 90.00,   "date": "2024-06-20T10:30:00Z", "region": "West"  },
+  { "_id": 19, "customer_id": "C002", "category": "Clothing",    "product": "Hoodie",         "amount": 55.00,   "date": "2024-07-04T09:00:00Z", "region": "South" },
+  { "_id": 20, "customer_id": "C006", "category": "Electronics", "product": "SSD Drive",      "amount": 110.00,  "date": "2024-07-15T11:00:00Z", "region": "East"  }
+]

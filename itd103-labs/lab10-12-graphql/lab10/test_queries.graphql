@@ -1,0 +1,162 @@
+# =============================================================
+# Lab 10 – Part C: Test Queries
+# Paste each query into GraphiQL at http://localhost:4000/graphql
+# =============================================================
+
+# ─────────────────────────────────────────────────────────────
+# STEP 1: Seed data — add books first
+# ─────────────────────────────────────────────────────────────
+mutation SeedBooks {
+  addBooks(books: [
+    {
+      title: "The Great Gatsby"
+      author: "F. Scott Fitzgerald"
+      genre: "Classic"
+      publishedYear: 1925
+      price: 12.99
+      inStock: true
+    }
+    {
+      title: "To Kill a Mockingbird"
+      author: "Harper Lee"
+      genre: "Classic"
+      publishedYear: 1960
+      price: 10.99
+      inStock: true
+    }
+    {
+      title: "Harry Potter and the Sorcerer's Stone"
+      author: "J.K. Rowling"
+      genre: "Fantasy"
+      publishedYear: 1997
+      price: 15.99
+      inStock: true
+    }
+    {
+      title: "The Hobbit"
+      author: "J.R.R. Tolkien"
+      genre: "Fantasy"
+      publishedYear: 1937
+      price: 13.99
+      inStock: true
+    }
+    {
+      title: "Clean Code"
+      author: "Robert C. Martin"
+      genre: "Technology"
+      publishedYear: 2008
+      price: 35.99
+      inStock: true
+    }
+  ]) {
+    id
+    title
+    author
+    genre
+    price
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 1. Query all books
+# ─────────────────────────────────────────────────────────────
+query GetAllBooks {
+  books {
+    id
+    title
+    author
+    genre
+    price
+    inStock
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 2. Query books by genre
+# ─────────────────────────────────────────────────────────────
+query GetFantasyBooks {
+  booksByGenre(genre: "Fantasy") {
+    title
+    author
+    publishedYear
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 3. Query all authors with their books
+# ─────────────────────────────────────────────────────────────
+query GetAuthors {
+  authors {
+    name
+    books {
+      title
+      genre
+    }
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 4. Add a single new book
+# ─────────────────────────────────────────────────────────────
+mutation AddOneBook {
+  addBook(input: {
+    title: "1984"
+    author: "George Orwell"
+    genre: "Dystopian"
+    publishedYear: 1949
+    price: 11.99
+    inStock: true
+  }) {
+    id
+    title
+    author
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 5. Update a book (replace BOOK_ID_HERE with a real ID from query 1)
+# ─────────────────────────────────────────────────────────────
+mutation UpdateBook {
+  updateBook(id: "BOOK_ID_HERE", input: {
+    price: 14.99
+    inStock: false
+  }) {
+    id
+    title
+    price
+    inStock
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 6. Toggle stock status
+# ─────────────────────────────────────────────────────────────
+mutation ToggleStock {
+  toggleStock(id: "BOOK_ID_HERE") {
+    id
+    title
+    inStock
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 7. Delete a book
+# ─────────────────────────────────────────────────────────────
+mutation DeleteBook {
+  deleteBook(id: "BOOK_ID_HERE") {
+    id
+    title
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# 8. Query books by author
+# ─────────────────────────────────────────────────────────────
+query GetBooksByAuthor {
+  booksByAuthor(author: "J.K. Rowling") {
+    title
+    genre
+    publishedYear
+    price
+  }
+}

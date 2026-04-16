@@ -1,0 +1,12 @@
+{
+  "name": "users-service",
+  "version": "1.0.0",
+  "scripts": { "start": "node src/server.js", "dev": "nodemon src/server.js" },
+  "dependencies": {
+    "@apollo/federation": "^0.38.1",
+    "apollo-server": "^2.25.4",
+    "graphql": "^15.8.0",
+    "neo4j-driver": "^5.14.0"
+  },
+  "devDependencies": { "nodemon": "^3.0.1" }
+}

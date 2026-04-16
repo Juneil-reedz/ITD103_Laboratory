@@ -1,0 +1,8 @@
+[
+  { "_id": "C001", "name": "Alice Santos",   "email": "alice@email.com",   "city": "Manila",     "joined": "2023-01-10T00:00:00Z" },
+  { "_id": "C002", "name": "Bob Reyes",      "email": "bob@email.com",     "city": "Cebu",       "joined": "2023-03-22T00:00:00Z" },
+  { "_id": "C003", "name": "Charlie Cruz",   "email": "charlie@email.com", "city": "Davao",      "joined": "2023-05-15T00:00:00Z" },
+  { "_id": "C004", "name": "Diana Lim",      "email": "diana@email.com",   "city": "Quezon City","joined": "2023-07-01T00:00:00Z" },
+  { "_id": "C005", "name": "Edward Tan",     "email": "edward@email.com",  "city": "Makati",     "joined": "2023-09-18T00:00:00Z" },
+  { "_id": "C006", "name": "Fiona Garcia",   "email": "fiona@email.com",   "city": "Pasig",      "joined": "2023-11-05T00:00:00Z" }
+]

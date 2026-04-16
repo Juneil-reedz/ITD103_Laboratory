@@ -1,0 +1,158 @@
+[
+  {
+    "_id": 1,
+    "name": "Morris Park Bake Shop",
+    "cuisine": ["Bakery", "American"],
+    "address": {
+      "street": "1007 Morris Park Ave",
+      "borough": "Bronx",
+      "zipcode": "10462",
+      "coord": [-73.856077, 40.848447]
+    },
+    "grades": [
+      { "date": "2024-03-01", "grade": "A", "score": 15 },
+      { "date": "2023-09-15", "grade": "A", "score": 18 },
+      { "date": "2023-01-22", "grade": "B", "score": 25 }
+    ]
+  },
+  {
+    "_id": 2,
+    "name": "Wendy'S",
+    "cuisine": ["Hamburgers", "American"],
+    "address": {
+      "street": "469 Flatbush Avenue",
+      "borough": "Brooklyn",
+      "zipcode": "11225",
+      "coord": [-73.961704, 40.662942]
+    },
+    "grades": [
+      { "date": "2024-01-10", "grade": "A", "score": 8 },
+      { "date": "2023-06-05", "grade": "A", "score": 11 },
+      { "date": "2022-11-20", "grade": "A", "score": 9 }
+    ]
+  },
+  {
+    "_id": 3,
+    "name": "Golden Dragon",
+    "cuisine": ["Chinese", "Thai"],
+    "address": {
+      "street": "58 W 48th St",
+      "borough": "Manhattan",
+      "zipcode": "10036",
+      "coord": [-73.979681, 40.757552]
+    },
+    "grades": [
+      { "date": "2024-02-14", "grade": "A", "score": 13 },
+      { "date": "2023-08-30", "grade": "B", "score": 22 },
+      { "date": "2023-02-10", "grade": "A", "score": 10 }
+    ]
+  },
+  {
+    "_id": 4,
+    "name": "Pizza Palace",
+    "cuisine": ["Pizza", "Italian"],
+    "address": {
+      "street": "234 Main Street",
+      "borough": "Queens",
+      "zipcode": "11354",
+      "coord": [-73.830348, 40.762759]
+    },
+    "grades": [
+      { "date": "2024-04-01", "grade": "A", "score": 7 },
+      { "date": "2023-10-12", "grade": "A", "score": 9 }
+    ]
+  },
+  {
+    "_id": 5,
+    "name": "Sunrise Bakery & Coffee Shop",
+    "cuisine": ["Bakery", "Coffee"],
+    "address": {
+      "street": "12 Sunrise Ave",
+      "borough": "Staten Island",
+      "zipcode": "10301",
+      "coord": [-74.077642, 40.641311]
+    },
+    "grades": [
+      { "date": "2024-03-20", "grade": "A", "score": 5 },
+      { "date": "2023-07-18", "grade": "A", "score": 6 },
+      { "date": "2022-12-01", "grade": "A", "score": 4 }
+    ]
+  },
+  {
+    "_id": 6,
+    "name": "Thai Spice",
+    "cuisine": ["Thai"],
+    "address": {
+      "street": "99 East Broadway",
+      "borough": "Manhattan",
+      "zipcode": "10002",
+      "coord": [-73.994869, 40.713824]
+    },
+    "grades": [
+      { "date": "2024-01-28", "grade": "B", "score": 21 },
+      { "date": "2023-05-14", "grade": "A", "score": 14 }
+    ]
+  },
+  {
+    "_id": 7,
+    "name": "Bronx Pizza Co",
+    "cuisine": ["Pizza"],
+    "address": {
+      "street": "510 Willis Ave",
+      "borough": "Bronx",
+      "zipcode": "10455",
+      "coord": [-73.919415, 40.816948]
+    },
+    "grades": [
+      { "date": "2024-02-05", "grade": "A", "score": 11 },
+      { "date": "2023-09-01", "grade": "A", "score": 13 },
+      { "date": "2023-03-15", "grade": "B", "score": 28 }
+    ]
+  },
+  {
+    "_id": 8,
+    "name": "Dragon Palace",
+    "cuisine": ["Chinese"],
+    "address": {
+      "street": "88 Mott Street",
+      "borough": "Manhattan",
+      "zipcode": "10013",
+      "coord": [-73.997141, 40.715346]
+    },
+    "grades": [
+      { "date": "2024-03-10", "grade": "A", "score": 12 },
+      { "date": "2023-10-05", "grade": "A", "score": 10 }
+    ]
+  },
+  {
+    "_id": 9,
+    "name": "Brooklyn Burger Bar",
+    "cuisine": ["Hamburgers", "American"],
+    "address": {
+      "street": "300 Atlantic Ave",
+      "borough": "Brooklyn",
+      "zipcode": "11201",
+      "coord": [-73.989723, 40.690021]
+    },
+    "grades": [
+      { "date": "2024-04-05", "grade": "A", "score": 9 },
+      { "date": "2023-11-11", "grade": "A", "score": 7 },
+      { "date": "2023-05-20", "grade": "B", "score": 23 }
+    ]
+  },
+  {
+    "_id": 10,
+    "name": "Italian Kitchen",
+    "cuisine": ["Italian", "Pizza"],
+    "address": {
+      "street": "45 Mulberry Street",
+      "borough": "Manhattan",
+      "zipcode": "10013",
+      "coord": [-73.997542, 40.71875]
+    },
+    "grades": [
+      { "date": "2024-02-20", "grade": "A", "score": 6 },
+      { "date": "2023-08-08", "grade": "A", "score": 8 }
+    ]
+  }
+]

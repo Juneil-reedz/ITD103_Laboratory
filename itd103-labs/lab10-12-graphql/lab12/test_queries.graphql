@@ -1,0 +1,149 @@
+# =============================================================
+# Lab 12 – Part C & D: Federated Query Tests
+# Run these in Apollo Sandbox at http://localhost:4000
+# =============================================================
+
+# ─────────────────────────────────────────────────────────────
+# SEED: Add a book (books-service)
+# ─────────────────────────────────────────────────────────────
+mutation AddBook {
+  addBook(
+    title: "MongoDB: The Definitive Guide"
+    author: "Shannon Bradshaw"
+    genre: "Technology"
+    publishedYear: 2019
+    isbn: "978-1491954461"
+    totalCopies: 5
+  ) {
+    id
+    title
+    availableCopies
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# SEED: Register a user (users-service)
+# ─────────────────────────────────────────────────────────────
+mutation RegisterUser {
+  registerUser(
+    name: "Alice Santos"
+    email: "alice@library.com"
+    membershipType: "Premium"
+  ) {
+    id
+    name
+    membershipType
+    joinedDate
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# SEED: Create a loan (loans-service)
+# Replace USER_ID and BOOK_ID with real IDs from above
+# ─────────────────────────────────────────────────────────────
+mutation BorrowBook {
+  createLoan(userId: "USER_ID", bookId: "BOOK_ID", dueDays: 14) {
+    id
+    dueDate
+    isOverdue
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# Federated query spanning all 3 services
+# ─────────────────────────────────────────────────────────────
+query GetUserWithBorrowedBooks {
+  user(id: "USER_ID") {
+    name
+    email
+    membershipType
+    borrowedBooks {
+      title
+      author
+      genre
+    }
+    friends {
+      name
+      borrowedBooks {
+        title
+      }
+    }
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# Search books across catalog
+# ─────────────────────────────────────────────────────────────
+query SearchBooks {
+  searchBooks(query: "MongoDB") {
+    id
+    title
+    author
+    availableCopies
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# Get all active loans with full book + user info
+# ─────────────────────────────────────────────────────────────
+query GetAllLoans {
+  loans {
+    id
+    borrowedAt
+    dueDate
+    isOverdue
+    user {
+      name
+      email
+    }
+    book {
+      title
+      author
+    }
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# Get overdue loans (alert report)
+# ─────────────────────────────────────────────────────────────
+query GetOverdueLoans {
+  overdueLoans {
+    id
+    dueDate
+    user {
+      name
+      email
+    }
+    book {
+      title
+    }
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# Friend-based book recommendations (graph traversal via Neo4j)
+# ─────────────────────────────────────────────────────────────
+query GetRecommendations {
+  recommendedBooks(userId: "USER_ID") {
+    id
+    title
+    author
+    genre
+    availableCopies
+  }
+}
+
+# ─────────────────────────────────────────────────────────────
+# Return a book
+# ─────────────────────────────────────────────────────────────
+mutation ReturnBook {
+  returnBook(loanId: "LOAN_ID") {
+    id
+    returnedAt
+    isOverdue
+    book {
+      title
+      availableCopies
+    }
+  }
+}

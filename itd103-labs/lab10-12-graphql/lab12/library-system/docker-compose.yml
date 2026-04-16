@@ -1,0 +1,69 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: library-mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  neo4j:
+    image: neo4j:5.15
+    container_name: library-neo4j
+    ports:
+      - "7475:7474"
+      - "7688:7687"
+    environment:
+      NEO4J_AUTH: neo4j/password
+    volumes:
+      - neo4j_data:/data
+
+  books-service:
+    build: ./books-service
+    container_name: books-service
+    ports:
+      - "4001:4001"
+    depends_on:
+      - mongodb
+    environment:
+      MONGODB_URI: mongodb://mongodb:27017/library_books
+
+  users-service:
+    build: ./users-service
+    container_name: users-service
+    ports:
+      - "4002:4002"
+    depends_on:
+      - neo4j
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: password
+
+  loans-service:
+    build: ./loans-service
+    container_name: loans-service
+    ports:
+      - "4003:4003"
+    depends_on:
+      - mongodb
+    environment:
+      MONGODB_URI: mongodb://mongodb:27017/library_loans
+
+  gateway:
+    build: ./gateway
+    container_name: api-gateway
+    ports:
+      - "4000:4000"
+    depends_on:
+      - books-service
+      - users-service
+      - loans-service
+    environment:
+      BOOKS_SERVICE_URL: http://books-service:4001/graphql
+      USERS_SERVICE_URL: http://users-service:4002/graphql
+      LOANS_SERVICE_URL: http://loans-service:4003/graphql
+
+volumes:
+  mongo_data:
+  neo4j_data:
