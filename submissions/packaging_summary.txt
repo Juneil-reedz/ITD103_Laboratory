@@ -1,0 +1,25 @@
+
+Lab    ZipFile                                        Files SizeKB Status
+---    -------                                        ----- ------ ------
+Lab 1  ITD103_Lab1_Asaad_FatimaReedzqha_20260502.zip     16  487.4 OK    
+Lab 2  ITD103_Lab2_Asaad_FatimaReedzqha_20260502.zip     12    458 OK    
+Lab 3  ITD103_Lab3_Asaad_FatimaReedzqha_20260502.zip     14  478.2 OK    
+Lab 4  ITD103_Lab4_Asaad_FatimaReedzqha_20260502.zip     10  285.9 OK    
+Lab 5  ITD103_Lab5_Asaad_FatimaReedzqha_20260502.zip     16  572.4 OK    
+Lab 6  ITD103_Lab6_Asaad_FatimaReedzqha_20260502.zip      7     12 OK    
+Lab 7  ITD103_Lab7_Asaad_FatimaReedzqha_20260502.zip     11  348.5 OK    
+Lab 8  ITD103_Lab8_Asaad_FatimaReedzqha_20260502.zip     24 1138.1 OK    
+Lab 9  ITD103_Lab9_Asaad_FatimaReedzqha_20260502.zip     17  687.1 OK    
+Lab 10 ITD103_Lab10_Asaad_FatimaReedzqha_20260502.zip    22  672.7 OK    
+Lab 11 ITD103_Lab11_Asaad_FatimaReedzqha_20260502.zip    17  470.7 OK    
+Lab 12 ITD103_Lab12_Asaad_FatimaReedzqha_20260502.zip    19  141.9 OK    
+Lab 13 ITD103_Lab13_Asaad_FatimaReedzqha_20260502.zip     7     10 OK    
+Lab 14 ITD103_Lab14_Asaad_FatimaReedzqha_20260502.zip     9  176.6 OK    
+Lab 15 ITD103_Lab15_Asaad_FatimaReedzqha_20260502.zip     7   14.3 OK    
+Lab 16 ITD103_Lab16_Asaad_FatimaReedzqha_20260502.zip     8   50.3 OK    
+Lab 17 ITD103_Lab17_Asaad_FatimaReedzqha_20260502.zip     8  177.7 OK    
+Lab 18 ITD103_Lab18_Asaad_FatimaReedzqha_20260502.zip     6  125.8 OK    
+
+
+
+Generated: 05/02/2026 23:40:10
